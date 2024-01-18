@@ -1,0 +1,38 @@
+<form [formGroup]="userForm" (ngSubmit)="submit()">   
+  <div class="form-group">
+    <label for="exampleInputEmail1">name</label>
+    <input type="text" formControlName="id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name">
+    <small class="text-danger" *ngIf="userForm.get('id')?.errors && userForm.get('id')?.touched">id invalid</small>
+  </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">name</label>
+        <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name">
+        <small class="text-danger" *ngIf="userForm.get('name')?.errors && userForm.get('name')?.touched">name invalid</small>
+      </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Username</label>
+      <input type="text" formControlName="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="username">
+      <small class="text-danger" *ngIf="userForm.get('username')?.errors && userForm.get('username')?.touched">user invalid</small>
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small class="text-danger" *ngIf="userForm.get('email')?.errors && userForm.get('email')?.touched">email invalid</small>
+
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Phone</label>
+        <input type="text" formControlName="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="phone">
+        <small class="text-danger" *ngIf="userForm.get('phone')?.errors && userForm.get('phone')?.touched">phone invalid</small>
+
+      </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Website</label>
+      <input type="text" formControlName="website" class="form-control" id="exampleInputPassword1" placeholder="website">
+      <small class="text-danger" *ngIf="userForm.get('website')?.errors && userForm.get('website')?.touched">website invalid</small>
+
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

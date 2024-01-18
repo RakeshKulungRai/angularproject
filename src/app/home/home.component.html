@@ -1,0 +1,20 @@
+<app-saveuser></app-saveuser>
+<table class="table table-bordered">
+    <tr >
+        <th>Id</th>
+        <th>username</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>Website</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor ="let user of userData;let i=index">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.website}}</td>
+        <td><button class="btn btn-primary" (click)="Edit(user.id)">Edit</button></td>
+        <td><button class="btn btn-danger" (click)="Delete(user.id)">Delete</button></td>
+    </tr>
+</table>
